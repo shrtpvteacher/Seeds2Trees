@@ -1,62 +1,53 @@
-import { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
-import { ethers } from 'ethers'
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserProvider, formatEther } from 'ethers';
 
-// Components
+
 import Navigation from './Navigation';
-import Loading from './Loading';
-
-// ABIs: Import your contract ABIs here
-// import TOKEN_ABI from '../abis/Token.json'
-
-// Config: Import your network config here
-// import config from '../config.json';
+import Home from '../pages/Home';
+import Gallery from '../pages/Gallery';
+import Admin from '../pages/Admin';
+import TotalDonations from '../pages/TotalDonations';
+import '../styles/App.css';
 
 function App() {
-  const [account, setAccount] = useState(null)
-  const [balance, setBalance] = useState(0)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  const loadBlockchainData = async () => {
-    // Initiate provider
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-
-    // Fetch accounts
-    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
-    const account = ethers.utils.getAddress(accounts[0])
-    setAccount(account)
-
-    // Fetch account balance
-    let balance = await provider.getBalance(account)
-    balance = ethers.utils.formatUnits(balance, 18)
-    setBalance(balance)
-
-    setIsLoading(false)
-  }
+  const [account, setAccount] = useState(null);
+  const [balance, setBalance] = useState(0);
 
   useEffect(() => {
-    if (isLoading) {
-      loadBlockchainData()
-    }
-  }, [isLoading]);
+    const loadBlockchainData = async () => {
+        if (window.ethereum) {
+          const provider = new BrowserProvider(window.ethereum); // ✅ Ethers v6 fix
+          //const signer = await provider.getSigner();
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          setAccount(accounts[0]);
 
-  return(
-    <Container>
-      <Navigation account={account} />
+        // Fetch balance
+        const balance = await provider.getBalance(accounts[0]);
+        setBalance(formatEther(balance)); // ✅ Use formatEther() directly
+      }
+    };
 
-      <h1 className='my-4 text-center'>React Hardhat Template</h1>
+    loadBlockchainData();
+  }, []);
 
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <>
-          <p className='text-center'><strong>Your ETH Balance:</strong> {balance} ETH</p>
-          <p className='text-center'>Edit App.js to add your code here.</p>
-        </>
-      )}
-    </Container>
-  )
+  return (
+    <Router>
+      <div className="App">
+        {/* ✅ Pass wallet data as props */}
+        <Navigation account={account} balance={balance} />
+        
+        <div className="content-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/totalDonations" element={<TotalDonations />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

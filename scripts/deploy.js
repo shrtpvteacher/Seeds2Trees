@@ -7,21 +7,21 @@
 const hre = require("hardhat");
 
 async function main() {
-  const NAME = 'Dapp University'
-  const SYMBOL = 'DAPP'
-  const MAX_SUPPLY = '1000000'
+    const [deployer] = await ethers.getSigners();
+    console.log("Deploying contract with account:", deployer.address);
+  
+    const Seeds2Trees = await ethers.getContractFactory("Seeds2Trees");
+    const contract = await Seeds2Trees.deploy(deployer.address);
+    await contract.waitForDeployment(); 
 
-  // Deploy Token
-  const Token = await hre.ethers.getContractFactory('Token')
-  let token = await Token.deploy(NAME, SYMBOL, MAX_SUPPLY)
+  
+    console.log("Seeds2Trees deployed to:", await contract.getAddress());
 
-  await token.deployed()
-  console.log(`Token deployed to: ${token.address}\n`)
-}
-
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+  }
+  
+  main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+      console.error(error);
+      process.exit(1);
+    });

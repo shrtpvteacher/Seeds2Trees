@@ -1,0 +1,28 @@
+.donation-tracker {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 1.5rem auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tracker-item {
+    margin-bottom: 1.5rem;
+}
+
+.tracker-title {
+    color: #133420be;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.tracker-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0a0a0a;
+}
+
+

@@ -1,0 +1,129 @@
+/* src/App.css */
+
+/* Gradient background: light blue (sky) at the top to dark green (grass) at the bottom */
+.App {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #8acfe6, #011f01);
+    color: #333;
+  }
+  
+  /* Content container padding */
+  .content-container {
+    padding: 2rem;
+  }
+  
+  /* Navigation styling */
+  .custom-navbar {
+    background-color: #181919 !important;  
+  }
+  .custom-navbar .navbar-brand,
+  .custom-navbar .nav-link {
+    color: #0e0909 !important;  /* White text */
+  }
+  
+ 
+
+  /* ========================= */
+/* 📌 NEW: Donation Tracker Styling */
+/* ========================= */
+
+.donation-tracker {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 1rem auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items on top of each other */
+    gap: 2rem; /* Adds spacing between elements */
+
+}
+
+.donation-tracker h2 {
+    color: #133420be; /* Green title */
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;      
+}
+
+/* Style each tracker item */
+.tracker-item {
+    margin-bottom: 1.rem; /* Adds space between each item */
+}
+
+
+
+.tracker-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #133420;
+    margin-bottom: 2.5rem; /* Add more space below the title */
+    
+}
+
+/* Style the value */
+.tracker-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0a0a0a; /* Dark color */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .donation-tracker {
+        max-width: 90%; /* Make it responsive */
+        padding: 1.5rem;
+    }
+
+    .tracker-title {
+        font-size: 1.5rem;
+    }
+
+    .tracker-value {
+        font-size: 1rem;
+    }
+}
+
+/* Graph styling */
+.donation-tracker .recharts-responsive-container {
+    margin-top: 1rem;
+}
+  
+  /* Additional NFT Gallery styling  */
+
+  .nft-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .nft-card {
+    background-color: #fff;
+    border-radius: 15rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .nft-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .nft-card-img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* You can also style the card body if desired */
+  .nft-card-body {
+    padding: 1rem;
+    text-align: center;
+  }
+
+
+  
+
+  

@@ -1,0 +1,82 @@
+/* Updated styling for the donate page */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;600&display=swap');
+
+/* Apply different fonts & sizes to header and subtitle */
+.donate-header {
+    font-size: 3rem; /* Larger title for emphasis */
+    font-weight: 700; /* Extra bold */
+  
+    text-align: center;
+    margin-bottom: 3.5rem; /* Space below */
+    white-space: nowrap; /* Ensure it's on one line */
+    color: #004d40; /* Deep green for eco-friendly theme */
+}
+
+.donate-subtitle {
+    font-size: 1.8rem; /* Slightly smaller */
+    font-weight: 300; /* Light weight for contrast */
+  
+    text-align: center;
+    margin-bottom: 2.5rem; /* More spacing below */
+    color: #2e7d32; /* Slightly lighter green */
+}
+/* Styling for the Minimum Donation Text */
+.donate-minimum {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem; /* Increased space below */
+    color: #333; /* Darker for better readability */
+}
+
+/* Main container for donation section */
+.donate-container {
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 60px;
+    max-width: 600px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+/* Input field styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.donation-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border: 1px solid #bdacac;
+    border-radius: 6px;
+    
+}
+
+/* Donate button styling */
+.donate-button {
+    background-color: #171c1a;
+    color: white;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+   
+}
+
+.donate-button:hover {
+    background-color: #32f05b;
+    transform: scale(1.05); /* Slight lift on hover */
+}
+
+/* Status message styling */
+.tx-status {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}

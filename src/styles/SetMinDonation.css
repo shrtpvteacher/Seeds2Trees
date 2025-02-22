@@ -1,0 +1,68 @@
+/* ========================= */
+/* ✅ Set Min Donation Styling */
+/* ========================= */
+
+.set-min-donation-card {
+    background: #fff3cd; /* Light Yellow */
+    padding: 1.8rem;
+    border-radius: 20px;
+   
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+   
+}
+
+/* 📌 Title */
+.set-min-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #383261;
+    margin-bottom: 1rem;
+}
+
+/* 📌 Current Min Display */
+.set-min-current {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* 📌 Input Box */
+.set-min-group {
+    margin-top: 2rem;
+}
+
+.set-min-input {
+    width: 100%;
+    padding: 0.2rem;
+    font-size: 1rem;
+    border: 2px solid #0f0e0c;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/* 📌 Update Button */
+.set-min-button {
+    background-color: #120f0c;
+    color: rgb(221, 212, 212);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.set-min-button:hover {
+    background-color: #13110e;
+}
+
+/* 📌 Status Message */
+.set-min-status {
+    margin-top: 1rem;
+    font-weight: bold;
+}

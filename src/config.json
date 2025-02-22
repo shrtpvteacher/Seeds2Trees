@@ -1,7 +1,19 @@
-{
-  "31337": {
-    "token": {
-      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+{ 
+    "31337": {
+      "Seeds2Trees": {
+        "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+      }
+    },
+
+   
+    "11155111": {
+        "Seeds2Trees": {
+            "address": "0xb32e1461Cec756F370bA0f9C2dc866782f54bfB0"
+        }
     }
-  }
+    
 }
+  
+       
+      
+   

@@ -1,0 +1,76 @@
+  /* Admin Card Styling for OwnerUpdate page */
+
+
+
+/* ========================= */
+/* ✅ Admin Page Styling */
+/* ========================= */
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Space between cards */
+    padding: 2rem;
+}
+
+/* 📌 OwnerUpdate Section - Light Blue, More Rounded */
+.owner-card {
+    background: #eaeff3; /* Light Blue */
+    padding: 2rem;
+    border-radius: 25px; /* More rounded */
+    width: 85%; /* Adjust width */
+    max-width: 750px; /* Limit max width */
+    height: auto; /* Automatically adjust height */
+    margin: 2rem auto;
+    text-align: center;
+    
+}
+
+/* 📌 Owner Card Title */
+.owner-card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 1.5rem;
+}
+
+/* 📌 Withdraw Section - Dark Green, Less Rounded */
+.withdraw-card {
+    background: #c8e6c9; /* Light Green */
+    padding: 1.5rem; /* Smaller padding */
+    border-radius: 25px; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    width: 60%; /* Make this smaller */
+    max-width: 500px; /* Set a max width */
+    height: auto; /* Auto height */
+    margin: 2rem auto;
+    text-align: center;
+   
+}
+
+/* 📌 Withdraw Card Title */
+.withdraw-card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+}
+
+/* ✅ Button Styling */
+.admin-button {
+    background-color: #2e7d32; /* Green Button */
+    color: rgb(63, 50, 50);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.admin-button:hover {
+    background-color: #1b5e20;
+}
