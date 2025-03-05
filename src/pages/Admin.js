@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getOwner } from "../helpers/contract";
 import { Button, Container, Alert } from "react-bootstrap";
-import OwnerUpdate from "../components/OwnerUpdate";
+import SetTreeLocation from "../components/SetTreeLocation";
 import FinalizeWithdraw from "../components/FinalizeWithdraw";
 import SetMinDonation from "../components/SetMinDonation";
 import "../styles/Admin.css"; // ✅ Import the new CSS file
@@ -73,10 +73,10 @@ const Admin = () => {
         <Alert variant="warning">Please connect your wallet to continue.</Alert>
       )}
 
-           {/* ✅ Display OwnerUpdate functions inside a Blue Card */}
+           {/* ✅ Display SetTreeLocation functions inside a Blue Card */}
            <div className="owner-card">
         <h3 className="owner-card-title">Manage Tree Locations</h3>
-        <OwnerUpdate account={account} />
+        <SetTreeLocation account={account} />
       </div>
        {/* ✅ Set Min Donation Card */}
        <div className="set-min-donation-card">

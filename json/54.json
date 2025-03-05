@@ -1,0 +1,29 @@
+{
+  "id": "7edeb1e74827b8c0650dc84e2be7f2032068fa0c",
+  "name": "#54",
+  "description": "Seeds To Trees",
+  "image": "ipfs://bafybeifbjsfmlv3mmxfnyjvbdkslqgiy7uvomvbgggyplzb3nqeytnrsmy/54.png",
+  "edition": 54,
+  "attributes": [
+    {
+      "trait_type": "Backgrounds",
+      "value": "creek4"
+    },
+    {
+      "trait_type": "Trees",
+      "value": "doubleTree2"
+    },
+    {
+      "trait_type": "Foregrounds",
+      "value": "flowers"
+    },
+    {
+      "trait_type": "latitude",
+      "value": ""
+    },
+    {
+      "trait_type": "longitude",
+      "value": ""
+    }
+  ]
+}

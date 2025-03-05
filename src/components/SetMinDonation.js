@@ -53,7 +53,7 @@ const SetMinDonation = ({ account }) => {
       await tx.wait(); // ✅ Wait for transaction confirmation
 
       setStatus("✅ Minimum donation updated successfully!");
-      setCurrentMin(newMinDonation); // ✅ Update displayed value
+      setCurrentMin(newMinDonation); // ✅ Directly update the state instead of fetching again
       setNewMinDonation(""); // ✅ Reset input field
     } catch (error) {
       console.error("Error updating min donation:", error);
@@ -69,7 +69,9 @@ const SetMinDonation = ({ account }) => {
       {error && <Alert variant="danger">{error}</Alert>}
 
       {/* ✅ Show current minDonation */}
-      <p className="set-min-current">Current Minimum Donation: <strong>{currentMin} ETH</strong></p>
+      <p className="set-min-current">
+        Current Minimum Donation: <strong>{currentMin} ETH</strong>
+      </p>
 
       {isOwner ? (
         <>
@@ -85,7 +87,9 @@ const SetMinDonation = ({ account }) => {
                 className="set-min-input"
               />
             </Form.Group>
-            <Button type="submit" className="set-min-button">Update</Button>
+            <Button type="submit" className="set-min-button">
+              Update
+            </Button>
           </Form>
         </>
       ) : (
